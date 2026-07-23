@@ -1,0 +1,43 @@
+name: Evidence correction
+description: 报告证据错误、过时来源、失效链接或相反研究
+title: "[Evidence]: "
+labels:
+  - evidence
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你帮助提高项目的可审计性。请勿提交个人医疗、法律或财务隐私。
+  - type: input
+    id: location
+    attributes:
+      label: 涉及位置
+      description: 请填写文件路径、标题或相关段落。
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题说明
+      description: 当前内容哪里不准确、过时或缺少边界？
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 建议来源
+      description: 请提供题目、作者、年份、链接、证据类型及主要限制。
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 建议修改
+      description: 如果方便，请说明建议如何改写。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我没有提交身份、健康、法律、财务或账号等敏感信息。
+          required: true

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it using the metadata below."
+title: "Life Planning Coach"
+type: software
+authors:
+  - name: "mgn170018-prog"
+repository-code: "https://github.com/mgn170018-prog/life-planning-coach"
+url: "https://github.com/mgn170018-prog/life-planning-coach"
+license: MIT
+version: 0.1.1
+date-released: 2026-07-23
+keywords:
+  - life planning
+  - evidence-informed coaching
+  - career planning
+  - goal setting
+  - Codex skill
