@@ -1,2 +1,5 @@
-blank_issues_enabled: true
-contact_links: []
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/mgn170018-prog/life-planning-coach/discussions
+    about: 交流使用方法、提出开放问题或讨论改进方向

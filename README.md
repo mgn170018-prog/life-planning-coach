@@ -4,13 +4,53 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](skill/life-planning-coach/SKILL.md)
 
-一套面向 Codex 的循证型人生规划与执行 Skill。
+**一个会逐步提问、区分证据与推断，并把复杂人生问题转化为可验证行动计划的 Codex Skill。**
 
 An evidence-informed life-planning and execution coaching skill for Codex.
 
-它通过单问题动态访谈，帮助用户澄清真实目标、现实约束、关键矛盾和下一阶段行动，并把长期方向转化为可验证、可调整的计划。
+它不会替你决定人生，也不依赖成功学话术或名人模仿。它每次只问一个问题，根据你的回答动态调整访谈深度，识别目标、约束、矛盾和代价，再形成可以执行、验证和修正的计划。
 
-> 不是成功学话术，也不模仿名人。关键建议区分研究依据、专家实践与个体化推断，并用真实行动结果继续校正。
+[30秒安装](#30秒安装) · [开始使用](#开始使用) · [安装帮助](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=install-help.yml) · [使用反馈](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=usage-feedback.yml) · [证据地图](skill/life-planning-coach/references/evidence-map.md)
+
+## 30秒安装
+
+把下面整段文字发送给 Codex：
+
+```text
+请使用 $skill-installer 安装这个公开 Skill：
+
+https://github.com/mgn170018-prog/life-planning-coach/tree/v0.1.2/skill/life-planning-coach
+
+安装后请验证文件完整性，并告诉我下一轮对话是否可以直接使用 $life-planning-coach。
+```
+
+安装完成后，在下一轮对话中调用：
+
+```text
+使用 $life-planning-coach 帮助我梳理人生方向。每次只问一个问题，并把重要建议的依据、限制和不确定性说明清楚。
+```
+
+如果安装没有成功，请提交[安装帮助请求](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=install-help.yml)，并附上使用环境、操作步骤和错误信息，不要提交账号、健康、财务等敏感信息。
+
+## 开始使用
+
+你可以从完整规划开始：
+
+```text
+使用 $life-planning-coach 帮我完成一次完整人生规划。每次只问一个问题。
+```
+
+也可以只处理当前最重要的决定：
+
+```text
+使用 $life-planning-coach 帮我判断未来三年应该继续职场发展，还是开始创业。
+```
+
+还可以复盘已经执行过的计划：
+
+```text
+使用 $life-planning-coach 复盘我的90天计划，根据真实结果判断继续、调整还是停止。
+```
 
 ## 适合谁
 
@@ -65,26 +105,16 @@ An evidence-informed life-planning and execution coaching skill for Codex.
 - 建立每周、每月和季度复盘机制；
 - 审查并调整已有计划。
 
-## 快速安装
+## 手动安装
 
-在终端执行：
+如果你希望自己管理本地文件，可以在终端执行：
 
 ```bash
 git clone https://github.com/mgn170018-prog/life-planning-coach.git
 cp -R life-planning-coach/skill/life-planning-coach ~/.codex/skills/
 ```
 
-重新启动或刷新 Codex 后，使用：
-
-```text
-$life-planning-coach
-```
-
-也可以直接输入：
-
-```text
-使用 $life-planning-coach 帮助我梳理人生方向，并转化为可验证、可调整的行动计划。
-```
+重新启动或刷新 Codex 后，使用 `$life-planning-coach`。
 
 如果已经克隆过仓库：
 
@@ -93,20 +123,6 @@ git -C life-planning-coach pull
 ```
 
 然后先备份本机修改过的同名 Skill，再重新复制最新版。
-
-## 使用示例
-
-```text
-使用 $life-planning-coach 帮我判断未来三年应该继续职场发展，还是开始创业。
-```
-
-```text
-使用 $life-planning-coach 帮我完成一次完整人生规划。每次只问一个问题。
-```
-
-```text
-使用 $life-planning-coach 复盘我的90天计划，根据真实结果判断继续、调整还是停止。
-```
 
 ## 工作方式
 
@@ -154,11 +170,17 @@ skill/life-planning-coach/
 
 ## 参与改进
 
+- 安装失败或不知道下一步怎么做：提交 [Installation help](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=install-help.yml)；
+- 已经使用过，希望告诉我们哪里有价值或哪里让你停止：提交 [Usage feedback](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=usage-feedback.yml)；
+- 想交流使用方法或讨论改进方向：进入 [GitHub Discussions](https://github.com/mgn170018-prog/life-planning-coach/discussions)；
 - 发现证据错误、链接失效或相反研究：提交 [Evidence correction](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=evidence-correction.yml)；
-- 提交功能建议或行为问题：使用 GitHub Issues；
 - 贡献前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 尤其欢迎心理学、教育、职业发展、创业、法律、医疗和投资领域的专业人士帮助审查边界与证据。
+
+## 隐私与使用统计
+
+本 Skill 不会把你的对话内容或人生规划发送到本仓库，也没有隐藏的运行统计。因此，GitHub 克隆量不能证明真实使用情况。如果它确实帮助了你，欢迎提交一份不包含敏感信息的[使用反馈](https://github.com/mgn170018-prog/life-planning-coach/issues/new?template=usage-feedback.yml)。这会帮助项目根据真实结果继续改进。
 
 ## Project keywords
 
