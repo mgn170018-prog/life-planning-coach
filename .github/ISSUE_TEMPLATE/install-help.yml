@@ -1,0 +1,71 @@
+name: Installation help
+description: 安装失败、Skill未出现或不知道如何开始使用
+title: "[Install]: "
+labels:
+  - help wanted
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请只提供排查安装所需的信息，不要提交账号、令牌、对话内容或其他敏感信息。
+  - type: dropdown
+    id: codex_surface
+    attributes:
+      label: 使用环境
+      options:
+        - Codex Desktop
+        - Codex CLI
+        - Codex IDE extension
+        - Codex web
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: 操作系统
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: install_method
+    attributes:
+      label: 安装方式
+      options:
+        - 使用 $skill-installer 和 GitHub 链接
+        - 手动克隆并复制
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 已执行的步骤
+      description: 请按顺序说明你做了什么，以及在哪一步停止。
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: 错误信息或实际结果
+      description: 可以粘贴错误文本，但请先删除用户名、路径中的个人信息、令牌和账号信息。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+      description: 你原本希望看到什么？
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已删除账号、令牌、对话内容和其他敏感信息。
+          required: true

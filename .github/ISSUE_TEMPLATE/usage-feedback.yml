@@ -1,0 +1,73 @@
+name: Usage feedback
+description: 分享真实使用结果、阻力和改进建议
+title: "[Feedback]: "
+labels:
+  - feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你帮助项目根据真实使用结果改进。请用概括性语言回答，不要提交身份、健康、关系、财务或工作单位等敏感信息。
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: 使用场景
+      options:
+        - 完整人生规划
+        - 职业或创业决策
+        - 学习与成长计划
+        - 家庭、生活与多目标取舍
+        - 90天计划复盘
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: completion
+    attributes:
+      label: 使用进度
+      options:
+        - 完成了访谈和计划
+        - 仍在访谈中
+        - 中途停止
+        - 只测试了一个具体问题
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: 最有价值的部分
+      description: 哪个问题、判断或行动建议真正帮助了你？
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: 阻力或停止原因
+      description: 哪一步让你困惑、失去耐心或不愿继续？
+    validations:
+      required: true
+  - type: dropdown
+    id: reuse
+    attributes:
+      label: 你是否愿意再次使用？
+      options:
+        - 会
+        - 可能会
+        - 不会
+        - 还不能判断
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: 最希望改进的一件事
+      description: 如果下一版只能改一件事，你希望是什么？
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我没有提交身份、健康、关系、财务、工作单位或账号等敏感信息。
+          required: true
