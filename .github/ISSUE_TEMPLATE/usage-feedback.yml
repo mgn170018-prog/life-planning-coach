@@ -22,6 +22,19 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: discovery
+    attributes:
+      label: 你是如何发现这个项目的？
+      options:
+        - GitHub 搜索或推荐
+        - OpenAI Developer Community
+        - OpenAI Codex GitHub Discussions
+        - 小红书、知乎、即刻等中文内容平台
+        - 朋友或同事推荐
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
     id: completion
     attributes:
       label: 使用进度
